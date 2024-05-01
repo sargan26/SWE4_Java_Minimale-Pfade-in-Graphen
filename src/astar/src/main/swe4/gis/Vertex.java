@@ -9,6 +9,8 @@ public class Vertex {
   private SphericPoint     coordinates;
 
   public Vertex(long id, SphericPoint coordinates) {
+    this.id = id;
+    this.coordinates = coordinates;
   }
 
   public long getId() {
@@ -25,5 +27,10 @@ public class Vertex {
 
   public void setCoordinates(SphericPoint coordinates) {
     this.coordinates = coordinates;
+  }
+
+  @Override
+  public String toString() {
+    return "Vertex [id=" + id + ", coordinates=" + coordinates + "]";
   }
 }

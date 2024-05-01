@@ -89,9 +89,17 @@ public class EdgeData {
 		return isOneWay;
 	}
 
-	public void setOneWay(boolean isOneWay) {
+  public void setOneWay(boolean isOneWay) {
 		this.isOneWay = isOneWay;
 	}
+
+  public Edge convertEdgeDataToEdge() {
+    Vertex startVertex = new Vertex(startId, start);
+    Vertex endVertex = new Vertex(endId, end);
+    return new Edge(startVertex, endVertex, name, length, category);
+  }
+
+
 
 	@Override
   public String toString() {

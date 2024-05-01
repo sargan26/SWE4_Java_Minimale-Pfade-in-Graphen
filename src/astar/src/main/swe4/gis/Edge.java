@@ -7,6 +7,14 @@ public class Edge {
   private double length;
   private short  category;
 
+  public Edge(Vertex start, Vertex end, String name, double length, short category) {
+    this.start = start;
+    this.end = end;
+    this.name = name;
+    this.length = length;
+    this.category = category;
+  }
+
   public Vertex getStart() {
     return start;
   }
@@ -45,5 +53,16 @@ public class Edge {
 
   public void setCategory(short category) {
     this.category = category;
+  }
+
+  @Override
+  public String toString() {
+    return "Edge{" +
+            "start=" + start.getId() +
+            ", end=" + end.getId() +
+            ", name='" + name + '\'' +
+            ", length=" + length +
+            ", category=" + category +
+            '}';
   }
 }
